@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bressane & Francischetto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">
+      <img src="logo.png" alt=" Bressane & Francischetto">
+    </div>
+    <div class="top-infos">
+      <div class="icones">
+        <span>🛠️ Qualidade</span> • <span>⏰ Pontualidade</span> • <span>📅 Compromisso</span>
+      </div>
+      <div class="contatos">
+        <strong>Contato:</strong> (11) 99534-2878 / (11) 2211-0160
+      </div>
+    </div>
+  </header>
+<!-- Botão fixo para abrir o menu lateral -->
+<button id="menu-toggle-btn">☰ Menu</button>
+
+<!-- Menu lateral oculto inicialmente -->
+<nav id="menu-sidebar">
+  <ul>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="#sobre-nos">Quem Somos</a></li>
+    <li><a href="#politica">Política de Privacidade</a></li>
+  </ul>
+</nav>
+
+
+
+  <section class="hero-video">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="cadei.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h2> <p>Tradição e </p> excelência desde <p> 1850</p></h2>
+      <p>Restauração de movéis  com qualidade e confiança em todo Brasil e América do Sul</p>
+    </div>
+  </section>
+  <section id="sobre-nos">
+  <h2>Sobre Nós</h2>
+  <p>
+    Fundada em 1850, a Bressane & Francischetto é referência em restauração de móveis com técnicas tradicionais e acabamento refinado. Com mais de um século de história, combinamos a experiência de gerações com a qualidade artesanal em cada detalhe. 
+    Atuamos em todo o Brasil e América do Sul, oferecendo empalhamento em palha austríaca, pintura com Nitrolak e restauração de móveis coloniais. Nossa missão é preservar o valor histórico e emocional de cada peça, com pontualidade, compromisso e excelência.
+  </p>
+</section>
+
+
+  <section class="section" id="servicos">
+    <h2>Nossos Serviços</h2>
+    <ul id="carrosel">
+      <li><img src="cadeira.svg" class="icon"> Atendemos todos os tipos de movéis e todas as marcas</li>
+      <li><img src="bus.svg" class="icon"> Distribuição para todo Brasil e América do Sul</li>
+      <li><img src="palha.svg" class="icon"> Empalhamento em palha austríaca</li>
+      <li><img src="pen.svg" class="icon"> Restauração de móveis coloniais</li>
+      <li><img src="pincel.svg" class="icon"> Pintura com acabamento em Nitrolak</li>
+    </ul>
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2>Trabalhos Realizados</h2>
+    <div class="gallery">
+      <img src="cad1.jpeg.jpeg" alt="Cadeira restaurada">
+      <img src="cad2.jpeg" alt="Sofá restaurado">
+      <img src="cad3.jpeg" alt="Cabeceira restaurada">
+      <img src="cad5.jpeg" alt="Cabeceira restaurada">
+      <img src="cad6.jpeg" alt="Cabeceira restaurada">
+    </div>
+  </section>
+
+<section id="contato" class="section contact">
+
+
+
+  <h2>Fale Conosco</h2>
+
+  <div class="contact-info-box">
+    <p><strong>Endereço:</strong><br>
+      Rua Alves de Almeida, 786/790 – Chácara Belenzinho – Zona Leste – São Paulo
+    </p>
+    <p><strong>Telefones:</strong><br>
+      (11) 2211-0160 / (11) 2506-0949
+    </p>
+    <p><strong>WhatsApp:</strong><br>
+      (11) 99534-2878 / (11) 97878-5193
+    </p>
+    <p><strong>Responsável:</strong> Juarez Bressan</p>
+  </div>
+
+  <form id="form-contato">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+
+  <section class="section" id="politica">
+  <h2>Política de Privacidade</h2>
+  <p>Coletamos apenas os dados necessários para contato e atendimento ao cliente. 
+    Nenhuma informação pessoal é compartilhada com terceiros. Todas as informações são tratadas com segurança e confidencialidade, conforme a LGPD.</p>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Bressane & Francischetto. Todos os direitos reservados.</p>
+  </footer>
+
+  <div class="float-buttons">
+    <a href="https://wa.me/5511995342878" target="_blank" class="whatsapp"><img src="zp.png"></a>
+    <a href="mailto:contato@bressanefrancischetto.com.br" class="email"><img src="em.jpg"></a>
+  </div>
+ <div id="cookie-banner" class="cookie-banner">
+  <p>Usamos cookies para garantir a melhor experiência no nosso site, conforme nossa <a href="#politica">Política de Privacidade</a>.</p>
+  <button id="cookie-accept-btn">OK</button>
+</div>
+
+ <script>
+  const menuBtn = document.getElementById('menu-toggle-btn');
+  const sidebar = document.getElementById('menu-sidebar');
+
+  menuBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+  const banner = document.getElementById('cookie-banner');
+  const btn = document.getElementById('cookie-accept-btn');
+
+  // Verifica se o usuário já aceitou os cookies
+  if (!localStorage.getItem('cookiesAccepted')) {
+    banner.style.display = 'flex';
+  }
+
+  btn.addEventListener('click', function () {
+    localStorage.setItem('cookiesAccepted', 'true');
+    banner.style.display = 'none';
+  });
+});
+
+</script>
+
+</body>
+</html>
